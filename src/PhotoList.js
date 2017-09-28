@@ -1,10 +1,9 @@
 import React from 'react';
 import Photo from './Photo.js';
-// 2.	Build your app components according to the provided mockup.
-// Most components should be stateless functional components that focus on the UI rather than behavior. 
 
-//c.	A component for each category you wish to display. 
-//For example, a Sunset component, a Flowers component, and a Clouds component.
+// Display the data.Make sure each image gets a unique "key" prop.
+// There should be no console warnings regarding unique "key" props.
+// The title of each image list should be displayed dynamically via "props".
 
 const PhotoList = (props) => {
     const results = props.photos,

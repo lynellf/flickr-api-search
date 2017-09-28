@@ -1,7 +1,13 @@
 import React from 'react';
+
+// Install React Router and set up your and components.
+
 import { BrowserRouter, Route, Switch} from 'react-router-dom';
 import './App.css';
 import Search from './Search.js';
+
+// Get a Flickr API key
+
 import apiKey from './config.js';
 import Cats from './Cats.js';
 import Computers from './Computers.js';

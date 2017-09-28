@@ -3,6 +3,8 @@ import icon from './search.svg';
 import Nav from './Nav.js';
 import Results from './Results.js';
 
+// Add search field feature.The field should be visible only in the 'Search' route.
+
 export default class Search extends Component {
 
     state = {
