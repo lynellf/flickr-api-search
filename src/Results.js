@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import PhotoList from './PhotoList.js';
 import NoResults from './NoResults.js';
+import Loading from './Flickr.svg';
 
 
 
@@ -52,7 +53,7 @@ class Results extends Component {
         if (this.state.loading === true && this.props.query !=='') {
             return (
                 <div>
-                    <h3>Loading...</h3>
+                    <img src={Loading} alt="Loading Results" />
                 </div>
             );
 
