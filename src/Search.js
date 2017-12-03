@@ -27,7 +27,7 @@ export default class Search extends Component {
 
     render() {
         return (
-            <div>
+            <div className="container">
                 <form className="search-form" onSubmit={this.handleSubmit}>
                     <input type="search" name="search" placeholder="Search" onChange={this.onSearchChange} />
                     <button type="submit" className="search-button">

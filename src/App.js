@@ -2,7 +2,7 @@ import React from 'react';
 
 // Install React Router and set up your and components.
 
-import { BrowserRouter, Route, Switch} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, HashRouter} from 'react-router-dom';
 import './App.css';
 import Search from './Search.js';
 
@@ -17,17 +17,17 @@ import NotFound from './NotFound.js';
 const App = () =>{
 
     return (
-    <BrowserRouter>
+      <Router basename={'/flickr'} history={ HashRouter }>
       <div className="container">
         <Switch>
-          <Route exact path="/" render={() => (<Search api={apiKey} />)}/>
-          <Route path="/cats" render={() => (<Cats api={apiKey} />)} />
-          <Route path="/computers" render={() => (<Computers api={apiKey} />)} />
-          <Route path="/dogs" render={() => (<Dogs api={apiKey} />)} />
+          <Route exact path={`${process.env.PUBLIC_URL}/` } render={() => (<Search api={apiKey} />)}/>
+          <Route path={`${process.env.PUBLIC_URL}/cats`} render={() => (<Cats api={apiKey} />)} />
+          <Route path={`${process.env.PUBLIC_URL}/computers`} render={() => (<Computers api={apiKey} />)} />
+          <Route path={`${process.env.PUBLIC_URL}/dogs`} render={() => (<Dogs api={apiKey} />)} />
           <Route component={NotFound} />
         </Switch>
       </div>
-    </BrowserRouter>
+    </Router>
     );
   }
 
